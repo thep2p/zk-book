@@ -883,7 +883,7 @@ The following solution is valid, but creates unnecessary rows:
 $$
 \begin{align*}
 v_1 &= xx \\
-z &= 2v_1
+z &= 2v_1 + y\\
 \end{align*}
 $$
 

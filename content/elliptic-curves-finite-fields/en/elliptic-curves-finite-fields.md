@@ -214,9 +214,10 @@ Using the Python functions above, we can start with the point $(4, 10)$ and gene
 
 ```python
 # for our purposes, (4, 10) is the generator point G
-next_x, next_y = 4, 10print(1, 4, 10)
+next_x, next_y = 4, 10
+print(0, 4, 10)
 points = [(next_x, next_y)]
-for i in range(2, 12):
+for i in range(1, 12):
     # repeatedly add G to the next point to generate all the elements
     next_x, next_y = add_points(next_x, next_y, 4, 10, 11)
     print(i, next_x, next_y)
@@ -451,7 +452,7 @@ assert eq(lhs, rhs)
 The reader is encouraged to try different values of `x`, `y`, and `z` for themselves.
 
 #### Every element has an inverse
-The `py_ecc` library supplies us with the `neg` function which will provide the inverse of a given element by flipping it over the y-axis (in a finite field). The library encodes the "point at infinity" as a Python `None`.
+The `py_ecc` library supplies us with the `neg` function which will provide the inverse of a given element by flipping it over the x-axis (in a finite field). The library encodes the "point at infinity" as a Python `None`.
 
 ```python
 from py_ecc.bn128 import G1, multiply, neg, is_inf, Z1
